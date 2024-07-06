@@ -1,0 +1,5 @@
+.mid-section{
+    height: 480px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

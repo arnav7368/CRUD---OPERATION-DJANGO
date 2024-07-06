@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+<title>CRUD-Add</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid w-100 my-3">
+    <div class="w-75 m-auto mid-section">
+        <h4 class="text-center bg-dark text-light p-2"><span
+                style="color: yellow; border-bottom: 4px solid yellow;">Create</span> Employee Record</h4>
+        <!-- <h1 class="text-white">Add Page</h1> -->
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label>Name:</label>
+                <input type="text" name="name" placeholder="Full Name" class="form-control">
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Email Adress" class="form-control">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Phone:</label>
+                    <input type="text" name="phone" placeholder="Phone Number" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Designation:</label>
+                    <input type="text" name="dsg" placeholder="Enter Designation" class="form-control">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Salary:</label>
+                    <input type="number" name="salary" placeholder="Enter Salary" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>City:</label>
+                    <input type="text" name="city" placeholder="Enter City" class="form-control">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>State:</label>
+                    <input type="text" name="state" placeholder="Enter State" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-dark w-100">Submit</button>
+            </div> 
+        </form>
+    </div>
+</div>
+
+{% endblock %}
